@@ -1,0 +1,7 @@
+.vscode
+.idea
+frontend.iml
+server.iml
+nat.iml
+node_modules
+.git_history.zip

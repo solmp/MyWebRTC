@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-pre-gyp": "^0.17.0",
+    "node-turn": "^0.0.6",
+    "simple-peer": "^9.11.1",
+    "socket.io": "^4.6.1",
+    "socket.io-client": "^4.6.1",
+    "stun": "^2.1.0",
+    "wrtc": "^0.4.7",
+    "ws": "^8.13.0"
+  }
+}

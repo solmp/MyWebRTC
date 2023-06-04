@@ -1,0 +1,127 @@
+User connected: ClientA
+正在创建房间...
+房间【f90d42b9-297b-4873-ab25-2098ecf029bb】创建成功，创建者: aas
+User connected: ClientB
+// ClientB加入房间，向ClientA发送连接准备请求
+Wed Apr 19 2023 18:53:22 GMT+0800 , joinRoom from ClientB: {"identity":"asdad","roomId":"f90d42b9-297b-4873-ab25-2098ecf029bb"}
+Wed Apr 19 2023 18:53:22 GMT+0800  ConnectPrepare ClientB to ClientA: {"connUserSocketId":"ClientB"}
+用户【asdad】加入房间 f90d42b9-297b-4873-ab25-2098ecf029bb
+
+// ClientA准备好后，向ClientB发送连接初始化请求
+Wed Apr 19 2023 18:53:22 GMT+0800 , ConnectInit from ClientA: {"connUserSocketId":"ClientB"}
+Wed Apr 19 2023 18:53:22 GMT+0800  ConnectInit ClientA to ClientB: {"connUserSocketId":"ClientA"}
+
+// ClientB准备好后，向ClientA发送offer信令
+Wed Apr 19 2023 18:53:22 GMT+0800 , ConnectSignal from ClientB: 
+{"signal":{"type":"offer","sdp":"..."},
+"connUserSocketId":"ClientA"}
+Wed Apr 19 2023 18:53:22 GMT+0800  ConnectSignal ClientB to ClientA: 
+{"signal":{"type":"offer","sdp":"..."},
+"connUserSocketId":"ClientB"}
+
+// ClientA接收到offer信令后，向ClientB发送answer信令
+Wed Apr 19 2023 18:53:22 GMT+0800 , ConnectSignal from ClientA: 
+{"signal":{"type":"answer","sdp":"..."},
+"connUserSocketId":"ClientB"}
+Wed Apr 19 2023 18:53:22 GMT+0800  ConnectSignal ClientA to ClientB: 
+{"signal":{"type":"answer","sdp":"..."},
+"connUserSocketId":"ClientA"}
+
+// ClientA向ClientB发送transceiverRequest：audio信令
+Wed Apr 19 2023 18:53:22 GMT+0800 , ConnectSignal from ClientA: 
+{"signal":{"type":"transceiverRequest","transceiverRequest":{"kind":"audio"}},"connUserSocketId":"ClientB"}
+Wed Apr 19 2023 18:53:22 GMT+0800  ConnectSignal ClientA to ClientB: 
+{"signal":{"type":"transceiverRequest","transceiverRequest":{"kind":"audio"}},"connUserSocketId":"ClientA"}
+
+// ClientA向ClientB发送transceiverRequest：video信令
+Wed Apr 19 2023 18:53:22 GMT+0800 , ConnectSignal from ClientA: 
+{"signal":{"type":"transceiverRequest","transceiverRequest":{"kind":"video"}},"connUserSocketId":"ClientB"}
+Wed Apr 19 2023 18:53:22 GMT+0800  ConnectSignal ClientA to ClientB: 
+{"signal":{"type":"transceiverRequest","transceiverRequest":{"kind":"video"}},"connUserSocketId":"ClientA"}
+
+// ClientA向ClientB发送candidate信令
+Wed Apr 19 2023 18:53:22 GMT+0800 , ConnectSignal from ClientA: 
+{"signal":{"type":"candidate","candidate":{"candidate":"...",
+"sdpMLineIndex":0,"sdpMid":"0"}},"connUserSocketId":"ClientB"}
+Wed Apr 19 2023 18:53:22 GMT+0800  ConnectSignal ClientA to ClientB: 
+{"signal":{"type":"candidate","candidate":{"candidate":"...",
+"sdpMLineIndex":0,"sdpMid":"0"}},"connUserSocketId":"ClientA"}
+Wed Apr 19 2023 18:53:22 GMT+0800 , ConnectSignal from ClientA: 
+{"signal":{"type":"candidate","candidate":{"candidate":"...",
+"sdpMLineIndex":0,"sdpMid":"0"}},"connUserSocketId":"ClientB"}
+Wed Apr 19 2023 18:53:22 GMT+0800  ConnectSignal ClientA to ClientB: 
+{"signal":{"type":"candidate","candidate":{"candidate":"...",
+"sdpMLineIndex":0,"sdpMid":"0"}},"connUserSocketId":"ClientA"}
+Wed Apr 19 2023 18:53:22 GMT+0800 , ConnectSignal from ClientA: 
+{"signal":{"type":"candidate","candidate":{"candidate":"...",
+"sdpMLineIndex":0,"sdpMid":"0"}},"connUserSocketId":"ClientB"}
+Wed Apr 19 2023 18:53:22 GMT+0800  ConnectSignal ClientA to ClientB: 
+{"signal":{"type":"candidate","candidate":{"candidate":"...",
+"sdpMLineIndex":0,"sdpMid":"0"}},"connUserSocketId":"ClientA"}
+Wed Apr 19 2023 18:53:22 GMT+0800 , ConnectSignal from ClientA: 
+{"signal":{"type":"candidate","candidate":{"candidate":"...",
+"sdpMLineIndex":0,"sdpMid":"0"}},"connUserSocketId":"ClientB"}
+Wed Apr 19 2023 18:53:22 GMT+0800  ConnectSignal ClientA to ClientB: 
+{"signal":{"type":"candidate","candidate":{"candidate":"...",
+"sdpMLineIndex":0,"sdpMid":"0"}},"connUserSocketId":"ClientA"}
+Wed Apr 19 2023 18:53:22 GMT+0800 , ConnectSignal from ClientA: 
+{"signal":{"type":"candidate","candidate":{"candidate":"...",
+"sdpMLineIndex":0,"sdpMid":"0"}},"connUserSocketId":"ClientB"}
+Wed Apr 19 2023 18:53:22 GMT+0800  ConnectSignal ClientA to ClientB: 
+{"signal":{"type":"candidate","candidate":{"candidate":"...",
+"sdpMLineIndex":0,"sdpMid":"0"}},"connUserSocketId":"ClientA"}
+
+// ClientB向ClientA发送candidate信令
+Wed Apr 19 2023 18:53:22 GMT+0800 , ConnectSignal from ClientB: 
+{"signal":{"type":"candidate","candidate":{"candidate":"...",
+"sdpMLineIndex":0,"sdpMid":"0"}},"connUserSocketId":"ClientA"}
+Wed Apr 19 2023 18:53:22 GMT+0800  ConnectSignal ClientB to ClientA: 
+{"signal":{"type":"candidate","candidate":{"candidate":"...",
+"sdpMLineIndex":0,"sdpMid":"0"}},"connUserSocketId":"ClientB"}
+Wed Apr 19 2023 18:53:22 GMT+0800 , ConnectSignal from ClientB: 
+{"signal":{"type":"candidate","candidate":{"candidate":"...",
+"sdpMLineIndex":0,"sdpMid":"0"}},"connUserSocketId":"ClientA"}
+Wed Apr 19 2023 18:53:22 GMT+0800  ConnectSignal ClientB to ClientA: 
+{"signal":{"type":"candidate","candidate":{"candidate":"...",
+"sdpMLineIndex":0,"sdpMid":"0"}},"connUserSocketId":"ClientB"}
+Wed Apr 19 2023 18:53:22 GMT+0800 , ConnectSignal from ClientB: 
+{"signal":{"type":"candidate","candidate":{"candidate":"...",
+"sdpMLineIndex":0,"sdpMid":"0"}},"connUserSocketId":"ClientA"}
+Wed Apr 19 2023 18:53:22 GMT+0800  ConnectSignal ClientB to ClientA: 
+{"signal":{"type":"candidate","candidate":{"candidate":"...",
+"sdpMLineIndex":0,"sdpMid":"0"}},"connUserSocketId":"ClientB"}
+Wed Apr 19 2023 18:53:22 GMT+0800 , ConnectSignal from ClientB: 
+{"signal":{"type":"candidate","candidate":{"candidate":"...",
+"sdpMLineIndex":0,"sdpMid":"0"}},"connUserSocketId":"ClientA"}
+Wed Apr 19 2023 18:53:22 GMT+0800  ConnectSignal ClientB to ClientA: 
+{"signal":{"type":"candidate","candidate":{"candidate":"...",
+"sdpMLineIndex":0,"sdpMid":"0"}},"connUserSocketId":"ClientB"}
+Wed Apr 19 2023 18:53:22 GMT+0800 , ConnectSignal from ClientB: 
+{"signal":{"type":"candidate","candidate":{"candidate":"...",
+"sdpMLineIndex":0,"sdpMid":"0"}},"connUserSocketId":"ClientA"}
+Wed Apr 19 2023 18:53:22 GMT+0800  ConnectSignal ClientB to ClientA: 
+{"signal":{"type":"candidate","candidate":{"candidate":"...",
+"sdpMLineIndex":0,"sdpMid":"0"}},"connUserSocketId":"ClientB"}
+
+// ClientB向ClientA发送offer信令
+Wed Apr 19 2023 18:53:22 GMT+0800 , ConnectSignal from ClientB: 
+{"signal":{"type":"offer","sdp":"..."},
+"connUserSocketId":"ClientA"}
+Wed Apr 19 2023 18:53:22 GMT+0800  ConnectSignal ClientB to ClientA: 
+{"signal":{"type":"offer","sdp":"..."},
+"connUserSocketId":"ClientB"}
+
+// ClientA接收到offer信令后，向ClientB发送answer信令
+Wed Apr 19 2023 18:53:22 GMT+0800 , ConnectSignal from ClientA: 
+{"signal":{"type":"answer","sdp":"..."},
+"connUserSocketId":"ClientB"}
+Wed Apr 19 2023 18:53:22 GMT+0800  ConnectSignal ClientA to ClientB: 
+{"signal":{"type":"answer","sdp":"..."},
+"connUserSocketId":"ClientA"}
+用户【aas】已断开连接
+User connected: DhNmD9PpFtTszsIdAAAJ
+用户【asdad】已断开连接
+房间【f90d42b9-297b-4873-ab25-2098ecf029bb】已关闭
+User connected: Anhp5TGWxwfun3vAAAAL
+
+
